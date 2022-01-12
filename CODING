@@ -1,0 +1,1647 @@
+1. Internet :
+
+package Assignment;
+import java.util.Scanner;
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanMe=new Scanner(System.in);
+		char cont;
+		
+		do {
+		System.out.println("*************");
+		System.out.println("* MAIN MENU *");
+		System.out.println("*************");
+		
+		System.out.println("Check out your daily data usage here!");
+		System.out.println("");
+		
+		double time;
+        double data;
+        double solution;
+        double total;
+        double average;
+        
+        
+        System.out.println("enter data in mega bytes : "); 
+        double d1 = scanMe.nextDouble();
+        System.out.println("enter time in minutes : "); 
+        double t1 = scanMe.nextDouble();
+        System.out.println("enter time in hours : "); 
+        double t2 = scanMe.nextDouble();
+        System.out.println("enter time in months : "); 
+        double t3 = scanMe.nextDouble();
+        double s1 = (d1)/(t1);
+        System.out.print("Your data usage per minutes is " );
+        System.out.printf("%.2f" , s1);
+        System.out.println();
+        
+        double s2 = (d1)/(t2);
+        System.out.print("Your data usage per hours is " );
+        System.out.printf("%.2f" , s2);
+        
+        System.out.println();
+        
+        double s3 = (d1)/(t3);
+        System.out.print("Your data usage per months is " );
+        System.out.printf("%.2f" , s3);
+        
+        System.out.println();
+        
+        double f1 = s1 + s2 + s3;
+        System.out.print("Your total data usage is ");
+        System.out.printf("%.2f" , f1);
+        
+        System.out.println();
+        
+        double a1 = (s1 + s2 + s3) / 3;
+        System.out.print("Your average amount of data usage everyday is " );
+        System.out.printf("%.2f" , a1);
+        
+        System.out.println();
+        System.out.println();
+        System.out.println("*******************************************************************************");
+        System.out.println("Here are some extra information!");
+        System.out.println("You can check how much data have been used for various kind of activities.");
+        System.out.println("Try to check it out! ");
+        System.out.println("*******************************************************************************");
+        
+        
+        
+        System.out.println("Do you want extra informations? [Y/N] ");
+        char extra;
+        extra = scanMe.next().charAt(0);
+        extra = Character.toUpperCase(extra);
+        
+        if(extra == 'Y') {
+        double item;
+        double datausage;
+        System.out.println("Here are some activities for you to check out.");
+        
+        System.out.println();
+        
+        char photo;
+        System.out.print("Do you want to know the amount of data usage for uploading and downloading photo? ");
+        photo =scanMe.next().charAt(0);
+        photo = Character.toUpperCase(photo);
+        
+        if(photo == 'Y') {
+        System.out.println("Enter the amount of photo : ");
+        double i1 = scanMe.nextDouble();
+        double z1 = 5 * i1;
+        System.out.print("Your data usage to upload and dowload photo is ");
+        System.out.printf("%.2f" , z1);
+        }
+        else {
+        	System.out.println(" ");
+        }
+        System.out.println();
+        System.out.println();
+        
+        char video;
+        System.out.print("Do you want to know the amount of data usage for streaming videos? ");
+        video =scanMe.next().charAt(0);
+        video = Character.toUpperCase(video);
+        
+        if(video == 'Y') {
+        System.out.println("Enter the amount of  hour for standard definition video : ");
+        double i2 = scanMe.nextDouble();
+        double z2 = 750 * i2;
+        System.out.print("your data usage to stream standard definition video is ");
+        System.out.printf("%.2f" , z2);
+        
+        System.out.println();
+        System.out.println();
+        
+        System.out.println("Enter the amount of hour for high definition video : ");
+        double i3 = scanMe.nextDouble();
+        double z3 = 2000 * i3;
+        System.out.print("Your data usage to stream high definition video is ");
+        System.out.printf("%.2f" , z3);
+        }
+        else {
+        	System.out.println(" ");
+        }
+        
+        System.out.println();
+        System.out.println();
+        
+        char song;
+        System.out.print("Do you want to know the amount of data usage for listening to songs? ");
+        song =scanMe.next().charAt(0);
+        song = Character.toUpperCase(song);
+        
+        if(song == 'Y') {
+        System.out.println("Enter the total amount of every 4 minutes for songs : ");
+        double i4 = scanMe.nextDouble();
+        double z4 = 6.5 * i4;
+        System.out.print("Your data usage to listen to songs is ");
+        System.out.printf("%.2f" , z4);
+        }
+        else {
+        	System.out.println(" ");
+        }
+        
+        System.out.println();
+        System.out.println();
+        
+        char email;
+        System.out.print("Do you want to know the amount of data usage for sending emails? ");
+        email =scanMe.next().charAt(0);
+        email = Character.toUpperCase(email);
+        
+        if(email == 'Y') {
+        System.out.println("Enter the amount of email : ");
+        double i5 = scanMe.nextDouble();
+        double z5 = 0.02 * i5;
+        System.out.print("Your data usage to send emails is ");
+        System.out.printf("%.2f" , z5);
+        }
+        else {
+        	System.out.println(" ");
+        }
+        
+        System.out.println();
+        System.out.println();
+        
+        char web;
+        System.out.print("Do you want to know the amount of data usage for web surfing?");
+        web = scanMe.next().charAt(0);
+        web = Character.toUpperCase(web);
+        
+        if(web == 'Y') {
+        System.out.println("Enter the amount of hours for web surfing : ");
+        double i6 = scanMe.nextDouble();
+        double z6 = 18 * i6;
+        System.out.print("Your data usage for websurfing is ");
+        System.out.printf("%.2f" , z6);
+        }
+        else {
+        	System.out.println(" ");
+        }
+        
+        System.out.println();
+        System.out.println();
+        
+        char game;
+        System.out.print("Do you want to know the amount of data usage for online gaming? ");
+        game =scanMe.next().charAt(0);
+        game = Character.toUpperCase(game);
+        
+        if(game == 'Y') {
+        System.out.println("Enter the amount of hours for online gaming : ");
+        double i7 = scanMe.nextDouble();
+        double z7 = 20 * i7;
+        System.out.print("Your data usage for online gaming is ");
+        System.out.printf("%.2f" , z7);
+        }
+        else {
+        	System.out.println(" ");
+        }
+        
+        System.out.println();
+        System.out.println();
+        
+        char social;
+        System.out.print("Do you want to know the amount of data usage for social networking? ");
+        social =scanMe.next().charAt(0);
+        social = Character.toUpperCase(social);
+        
+        if(social == 'Y') {
+        System.out.println("Enter the amount of hours for social networking : ");
+        double i8 = scanMe.nextDouble();
+        double z8 = 51 * i8;
+        System.out.print("Your data usage for social networking is ");
+        System.out.printf("%.2f" , z8);
+        }
+        else {
+        	System.out.println(" ");
+        }
+        
+        System.out.println();
+        
+        }
+        
+        else {
+			System.out.println("Thankyou!");
+			
+		}
+        
+        System.out.print("Try Again? [Y/N] ");
+        
+        cont = scanMe.next().charAt(0);
+        cont=Character.toUpperCase(cont);
+        
+ 
+		}while(cont == 'Y');
+		System.out.println("Thankyou!");
+	}
+
+}
+
+2. Mobile Phone :
+
+package assignment;
+import java.util.Scanner;
+public class Ass {
+	 public static void line(){
+	 int line=1;
+	 while(line<=80){
+	 System.out.printf("%c",45);
+	 line++; 
+	        }
+	 }
+	 public static void dot(){
+		 int dot=1;
+		 while(dot<=80){
+		 System.out.print("-");
+		 dot++; 
+		        }
+	 }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Please enter the following information");
+		System.out.print("Name: ");
+		String name = scan.nextLine();
+		System.out.print("IC: ");
+		String IC = scan.nextLine();
+		System.out.print("Phone number: ");
+		String phonenumber = scan.nextLine();
+		System.out.print("Address: ");
+		String address = scan.nextLine();
+		
+		line();
+		System.out.println("\n                     **WELCOME DREAM MOBILE SHOP***");
+		line();
+		
+			double totalprice=0;
+			
+			//processor
+			System.out.println("\nWe have these processors!");
+			System.out.println("1. Snapdragon 888  RM 2000");
+			System.out.println("2. Snapdragon 855  RM 800");
+			System.out.println("3. Exynos 2100  RM 800");
+			System.out.println("4. Kirin 9000  RM 1200");
+			System.out.print("Please select your mobile phone's processor: ");
+			int processor1 = scan.nextInt();
+			if(processor1==1) {
+				System.out.println("You choose Snapdragon 888 and the price is RM 2000");
+				totalprice += 2000;	
+			}
+			else if(processor1==2) {
+				System.out.println("You choose Snapdragon 855 and the price is RM 800");
+				totalprice += 800;	
+			}
+			else if(processor1==3) {
+				System.out.println("You choose Exynos 2100 and the price is RM 800");
+				totalprice += 800;	
+			}
+			else if(processor1==4) {
+				System.out.println("You choose Kirin 9000 and the price is RM 1200");
+				totalprice += 1200;	
+			}
+			//ram
+			System.out.println("\nWe have these Ram!");
+			System.out.println("1. 4 GB Ram RM 200");
+			System.out.println("2. 6 GB Ram RM 400");
+			System.out.println("3. 8 GB Ram RM 500");
+			System.out.print("Please select your mobile phone's ram: ");
+			int ram1 = scan.nextInt();
+			
+			if(ram1==1) {
+				System.out.println("You choose 4 GB Ram and the price ram is RM 200");
+				totalprice += 200;	
+			}
+			else if(ram1==2) {
+				System.out.println("You choose 6 GB Ram and the price ram is RM 400");
+				totalprice += 400;	
+			}
+			else if(ram1==3) {
+				System.out.println("You choose 8 GB Ram and the price ram is RM 500");
+				totalprice += 500;	
+			}
+			//storage
+			System.out.println("\nWe have these storage!");		
+			System.out.println("1. 32 GB RM 300");
+			System.out.println("2. 64 GB RM 400");
+			System.out.println("3. 128 GB RM 600");
+			System.out.println("4. 256 GB RM 800");
+			System.out.print("Please select your mobile phone's storage: ");
+			int storage1 = scan.nextInt();
+			
+			if(storage1==1) {
+				System.out.println("You choose 32 GB strorage and the price is RM 300");
+				totalprice += 300;	
+			}
+			else if(storage1==2) {
+				System.out.println("You choose 64 GB strorage and the price is RM 400");
+				totalprice += 400;	
+			}
+			else if(storage1==3) {
+				System.out.println("You choose 128 GB strorage and the price is RM 600");
+				totalprice += 600;
+			}
+			else if(storage1==4) {
+				System.out.println("You choose 256 GB strorage and the price is RM 800");
+				totalprice += 800;	
+			}
+			//camera
+			System.out.println("\nWe have these camera!");			
+			System.out.println("1. 16 MP camera RM 100");
+			System.out.println("2. 32 MP camera RM 200");
+			System.out.println("3. 64 MP camera RM 300");
+			System.out.print("Please select your mobile phone's camera: ");
+			int camera1 = scan.nextInt();
+			
+			if(camera1==1) {
+				System.out.println("You choose 16 MP camera and the price camera is RM 100");
+				totalprice += 100;	
+			}
+			else if(camera1==2) {
+				System.out.println("You choose 32 MP camera and the price camera is RM 200");
+				totalprice += 200;	
+			}
+			else if(camera1==3) {
+				System.out.println("You choose 64 MP camera and the price camera is RM 300");
+				totalprice += 300;	
+			}
+			//screen technology
+			System.out.println("\nWe have these screen technology!");			
+			System.out.println("1. AMOLED RM 1000");
+			System.out.println("2. IPS RM 700");
+			System.out.print("Please select your mobile phone's screen: ");
+			int screen1 = scan.nextInt();
+			
+			if(screen1==1) {
+				System.out.println("You choose AMOLED and the pricescreen is RM 1000");
+				totalprice += 1000;	
+			}
+			else if(screen1==2) {
+				System.out.println("You choose IPS and the pricescreen is RM 700");
+				totalprice += 700;	
+			}
+			//Battery
+			System.out.println("\nWe have these battery!");			
+			System.out.println("1. Battery 4300 mAh RM 100");
+			System.out.println("2. Battery 5000 mAh RM 200");
+			System.out.println("3. Battery 6400 mAh RM 300");
+			System.out.print("Please select your mobile phone's battery: ");
+			int battery1 = scan.nextInt();
+			
+			if(battery1==1) {
+				System.out.println("You choose Battery 4300 mAh and the price battery is RM 100");
+				totalprice +=100;	
+			}
+			else if(battery1==2) {
+				System.out.println("You choose Battery 5000 mAh and the price battery is RM 200");
+				totalprice += 200;	
+			}
+			else if(battery1==3) {
+				System.out.println("You choose Battery 6400 mAh and the price battery is RM 300");
+				totalprice += 300;	
+			}
+			//earphone
+			char earphone;
+			do{
+				System.out.print("\nDo you want to purchase earphone for RM 25? YES(Y) or NO(N)");
+			
+			int priceearphone=25;			 
+			earphone = scan.next().charAt(0);
+			 if(earphone=='Y' || earphone=='y') {
+			 System.out.println("Thank you! You add on earphone completely!");
+			 totalprice += priceearphone;
+			 break;
+			}
+			 else if(earphone=='N'|| earphone=='n') {
+				 System.out.println("Alright thank you.");
+				 break;
+			 }
+			 else if (earphone !='Y'|| earphone=='y'||earphone=='N'|| earphone=='n'){
+				 System.out.println("Please enter the correct word!");				
+			 }}while(earphone !='Y'|| earphone=='y'||earphone=='N'|| earphone=='n');
+			 
+			//screen protector
+				char screenprotector;
+			do{
+				System.out.print("\nDo you want to purchase screen protector for RM 10? YES(Y) or NO(N)");
+		
+			int pricescreenprotector=10;			 
+			screenprotector = scan.next().charAt(0);
+			 if(screenprotector=='Y' || screenprotector=='y') {
+			 System.out.println("Thank you! You add on screen protector completely!");
+			 totalprice += pricescreenprotector;
+			 break;
+			}
+			 else if(screenprotector=='N'|| screenprotector=='n') {
+				 System.out.println("Alright thank you.");
+				 break;
+			 }
+			 else if (screenprotector !='Y'|| screenprotector=='y'||screenprotector=='N'|| screenprotector=='n'){
+				 System.out.println("Please enter the correct word!");
+			 }}while(screenprotector !='Y'|| screenprotector=='y'||screenprotector=='N'|| screenprotector=='n');
+			
+			//powerbank
+			char powerbank;
+			do{
+			System.out.print("\nDo you want to purchase powerbank for RM 50? YES(Y) or NO(N)");
+	
+			int pricepowerbank=50;			 
+			powerbank = scan.next().charAt(0);
+		 	if(powerbank=='Y' || powerbank=='y') {
+		 	 System.out.println("Thank you! You add on power bank completely!");
+		 	 totalprice += pricepowerbank;
+		 	 break;
+		 	}
+		 	else if(powerbank=='N'|| powerbank=='n') {
+			 System.out.println("Alright thank you.");
+			 break;
+		 	}
+		 	else if(powerbank !='Y'|| powerbank=='y'||powerbank=='N'|| powerbank=='n'){
+			 System.out.println("Please enter the correct word!");
+		 	}}while(powerbank !='Y'|| powerbank=='y'||powerbank=='N'|| powerbank=='n');
+			
+			//phonecase
+			char phonecase;
+			do{
+			System.out.print("\nDo you want to purchase phone case for RM 10? YES(Y) or NO(N)");
+	
+			int pricephonecase=10;			 
+			phonecase = scan.next().charAt(0);
+		 	if(phonecase=='Y' || phonecase=='y') {
+		 		System.out.println("Thank you! You add on phone case completely!");
+		 		totalprice += pricephonecase;
+		 		break;
+		 	}
+		 	else if(phonecase=='N'|| phonecase=='n') {
+			 System.out.println("Alright thank you.");
+			 break;
+		 	}
+		 	else if(phonecase !='Y'|| phonecase=='y'||phonecase=='N'|| phonecase=='n'){
+			 System.out.println("Please enter the correct word!");
+		 	}}while(phonecase !='Y'|| phonecase=='y'||phonecase=='N'|| phonecase=='n');
+			
+			
+			int shippingfee;
+			do{
+				System.out.print("\nWhat is the place you live and we can delivery to you.South(S) or North(N)");
+				int southshippingfee = 50 ;
+				int northshippingfee = 60 ;				
+				shippingfee = scan.next().charAt(0);
+			 	if(shippingfee=='S' || shippingfee=='s') {
+			 		System.out.println("Thank you! We will delivery to you!");
+			 		totalprice += southshippingfee;
+			 		break;
+			 	}
+			 	else if(shippingfee=='N'|| shippingfee=='n') {
+			 		System.out.println("Thank you! We will delivery to you!");
+			 		totalprice += northshippingfee;
+			 		break;
+			 	}
+			 	else if(shippingfee !='S'|| shippingfee=='s'||shippingfee=='N'|| shippingfee=='n'){
+				 System.out.println("Please enter the correct word!");
+			 	}}while(shippingfee !='S'|| shippingfee=='s'||shippingfee=='N'|| shippingfee=='n');
+			
+				System.out.printf("The total price is : RM %.2f%n" , totalprice);
+				double discount=totalprice * 0.10;
+				System.out.println("\nWe will give you 10% discount!!!");
+				System.out.printf("Discount                   : RM %.2f%n" , discount);
+				double price = totalprice - discount;
+				System.out.printf("Total Price after discount : RM %.2f%n" , price);
+				
+				int month;
+				String PT ;
+				char payment;
+				double tendered;
+				System.out.println("\nPlease choose your payment types");
+				System.out.println("Please Enter [C] as Cash or [I] as Instalment");
+				 PT = scan.next();
+				payment = PT.charAt(0);
+		    		if (payment =='C'||payment =='c'){
+		    		System.out.printf("\nThe total amount you should pay after discount is : RM %.2f%n", price);		    	
+					do {
+		    		System.out.print("Please enter your amount tendered : RM ");
+		    		tendered = scan.nextDouble();
+		    		
+		    		if(tendered<price) {
+		    			System.out.println("Please enter an enough amount!!!");
+		    		}
+		    		}while(tendered<price);
+					
+					double change = tendered-price ;
+					System.out.println("Thank you!!!");
+					System.out.println("This is your receipt");
+					 System.out.println();
+						//Receipt
+						dot();
+						System.out.println("\n                            **RECETPT***");
+						dot();
+						System.out.println("\n                   **DUDUDU ACCESSORIES SHOP***");
+						System.out.println("                   **CONTACT NUMBER: 016-3672588 ***");
+						
+						System.out.println("Consumer Detail");
+						System.out.println("Name         : " + name);
+						System.out.println("IC           : " + IC);
+						System.out.println("Phone Number : " + phonenumber);
+						System.out.println("Address      : " + address);
+						
+						System.out.println("\nThis is the accessories of your mobile phone!\n");																				
+						if(processor1==1) {
+							System.out.println("Processor: Snapdragon 888");			
+						}
+						if(processor1==2) {
+							System.out.println("Processor: Snapdragon 855 ");					
+						}
+						if(processor1==3) {
+							System.out.println("Processor: Exynos 2100 ");					
+						}
+						if(processor1==4) {
+							System.out.println("Processor: Kirin 9000  ");							
+						}
+						if(ram1==1) {
+							System.out.println("Ram: 4GB Ram");			
+						}
+						if(ram1==2) {
+							System.out.println("Ram: 4GB Ram");				
+						}
+						if(ram1==3) {
+							System.out.println("Ram: 8GB Ram");				
+						}
+						if(storage1==1) {
+							System.out.println("Storage: 32 GB");			
+						}
+						if(storage1==2) {
+							System.out.println("Storage: 64 GB");					
+						}
+						if(storage1==3) {
+							System.out.println("Storage: 128 GB");					
+						}
+						if(storage1==4) {
+							System.out.println("Storage: 256 GB");							
+						}
+						if(camera1==1) {
+							System.out.println("Camera: 16 MP Camera");			
+						}
+						if(camera1==2) {
+							System.out.println("Camera: 32 MP Camera");				
+						}
+						if(camera1==3) {
+							System.out.println("Camera: 64 MP Camera");				
+						}
+						if(screen1==1) {
+							System.out.println("Screen Technology: AMOLED");			
+						}
+						if(screen1==2) {
+							System.out.println("Screen Technology: IPS");				
+						}
+						if(battery1==1) {
+							System.out.println("Battery: 4300 mAh");			
+						}
+						if(battery1==2) {
+							System.out.println("Battery: 5000 mAh");				
+						}
+						if(battery1==3) {
+							System.out.println("Battery: 6400 mAh");				
+						}
+						System.out.println("You have purchase these accessories!!!");
+						 if(earphone=='Y' || earphone=='y') {
+							 System.out.println("Earphone");}
+						 if(screenprotector=='Y' || screenprotector=='y') {
+							 System.out.println("Screen protector");}
+						 if(powerbank=='Y' || powerbank=='y') {
+						 		System.out.println("Power bank");}
+						 if(phonecase=='Y' || phonecase=='y') {
+						 		System.out.println("Phone case");
+						 }
+						System.out.printf("\nTotal Price                : RM %.2f" ,totalprice);
+						System.out.printf("\nDiscount                   : RM %.2f" , discount);
+						System.out.printf("\nTotal Price after discount : RM %.2f" , price);				
+						System.out.printf("\nAmount Tendered            : RM %.2f%n" , tendered);
+						dot();
+						System.out.printf("\nChange                     : RM %.2f" , change);
+																					
+						System.out.println();
+						dot();
+						System.out.println("\n                        **THANK YOU!!! PLEASE COME AGAIN***");
+						dot();
+		    			}
+		    			else if (payment =='I'||payment=='i'){
+		    			double instalment=0;
+		    			double instalmentpay=0;
+		    			double instalmentpaymonth=0;
+		    			System.out.println("   ________________________");
+						System.out.println("  |      Instalment for 12 months' duration = 4% interest rate        |");
+						System.out.println("  |      Instalment for 24 months' duration = 5% interest rate        | ");
+						System.out.println("  |________________________|");
+						System.out.println("Please enter [12] for 12 months' duration, [24] for 24 months' duration");
+						month = scan.nextInt();
+						if (month == 12) {		
+							System.out.println("You choose 12 months' duration.");
+							instalment=price*0.04;
+							instalmentpay=price+instalment;
+							instalmentpaymonth=instalmentpay/12;
+							System.out.printf("Total instalment amount  : RM %.2f%n" , instalment);							
+							System.out.printf("Total balance should pay : RM %.2f%n" , instalmentpay);							
+							System.out.printf("Total should pay monthly : RM %.2f%n" , instalmentpaymonth);			
+						}
+						if (month == 24) {				
+							System.out.println("You choose 24 months' duration.");
+							instalment=price*0.05;
+							instalmentpay=price+instalment;
+							instalmentpaymonth=instalmentpay/24;
+							System.out.printf("Total instalment amount  : RM %.2f%n" , instalment);							
+							System.out.printf("Total balance should pay : RM %.2f%n" , instalmentpay);							
+							System.out.printf("Total should pay monthly : RM %.2f%n" , instalmentpaymonth);	
+						}
+						System.out.println("Thank you!!!");
+						System.out.println("This is your receipt");
+					
+						 System.out.println();
+							//Receipt
+							dot();
+							System.out.println("\n                            **RECETPT***");
+							dot();
+							System.out.println("\n                   **DUDUDU ACCESSORIES SHOP***");
+							System.out.println("                   **CONTACT NUMBER: 016-3672588 ***");
+							
+							System.out.println("Consumer Detail");
+							System.out.println("Name         : " + name);
+							System.out.println("IC           : " + IC);
+							System.out.println("Phone Number : " + phonenumber);
+							System.out.println("Address      : " + address);
+							
+							System.out.println("\nThis is the accessories of your mobile phone!\n");																				
+							if(processor1==1) {
+								System.out.println("Processor: Snapdragon 888");			
+							}
+							if(processor1==2) {
+								System.out.println("Processor: Snapdragon 855 ");					
+							}
+							if(processor1==3) {
+								System.out.println("Processor: Exynos 2100 ");					
+							}
+							if(processor1==4) {
+								System.out.println("Processor: Kirin 9000  ");							
+							}
+							if(ram1==1) {
+								System.out.println("Ram: 4GB Ram");			
+							}
+							if(ram1==2) {
+								System.out.println("Ram: 4GB Ram");				
+							}
+							if(ram1==3) {
+								System.out.println("Ram: 8GB Ram");				
+							}
+							if(storage1==1) {
+								System.out.println("Storage: 32 GB");			
+							}
+							if(storage1==2) {
+								System.out.println("Storage: 64 GB");					
+							}
+							if(storage1==3) {
+								System.out.println("Storage: 128 GB");					
+							}
+							if(storage1==4) {
+								System.out.println("Storage: 256 GB");							
+							}
+							if(camera1==1) {
+								System.out.println("Camera: 16 MP Camera");			
+							}
+							if(camera1==2) {
+								System.out.println("Camera: 32 MP Camera");				
+							}
+							if(camera1==3) {
+								System.out.println("Camera: 64 MP Camera");				
+							}
+							if(screen1==1) {
+								System.out.println("Screen Technology: AMOLED");			
+							}
+							if(screen1==2) {
+								System.out.println("Screen Technology: IPS");				
+							}
+							if(battery1==1) {
+								System.out.println("Battery: 4300 mAh");			
+							}
+							if(battery1==2) {
+								System.out.println("Battery: 5000 mAh");				
+							}
+							if(battery1==3) {
+								System.out.println("Battery: 6400 mAh");				
+							}
+							System.out.println("You have purchase these accessories!!!");
+							 if(earphone=='Y' || earphone=='y') {
+								 System.out.println("Earphone");}
+							 if(screenprotector=='Y' || screenprotector=='y') {
+								 System.out.println("Screenprotector");}
+							 if(powerbank=='Y' || powerbank=='y') {
+							 		System.out.println("Powerbank");}
+							 if(phonecase=='Y' || phonecase=='y') {
+							 		System.out.println("Phonecase");
+							 }
+							System.out.printf("\nTotal Price                : RM %.2f" ,totalprice);
+							System.out.printf("\nDiscount                   : RM %.2f" , discount);
+							System.out.printf("\nTotal Price after discount : RM %.2f" , price);				
+							System.out.printf("\nTotal instalment amount    : RM %.2f" , instalment);
+							System.out.println();
+							System.out.printf("Total balance should pay   : RM %.2f" , instalmentpay);
+							System.out.println();
+							System.out.printf("Total should pay monthly   : RM %.2f" , instalmentpaymonth);
+																						
+							System.out.println();
+							dot();
+							System.out.println("\n                        **THANK YOU!!! PLEASE COME AGAIN***");
+							dot();		    			
+		    			}					    		
+	}
+}
+
+3. Laptop :
+
+package assignment;
+
+import java.util.Scanner;
+
+
+public class Laptop2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		
+		//amount of laptop from various group
+		int groupA = 50;
+		int groupB = 45;
+		int groupC = 40;
+		int groupD = 35;
+		int groupE = 30;
+		
+		//old laptop information
+		double purchase_price;
+		double total_price0,total_price1,total_price2,total_price3,total_price4;
+		double salvage_value0,salvage_value1,salvage_value2,salvage_value3,salvage_value4;
+		double year;
+		double depreciation;
+		double value0,value1,value2,value3,value4;
+		
+		//new laptop information
+		int newlaptop;
+		double pricelaptop;
+		double totalprice;
+		
+		//Instalment and Deposit with interest
+		double deposit;
+		double receivable;
+		int instalperiod;
+		double instalment;
+		
+		//Cashback
+		int duration;
+		int cashback;
+		double penalty;
+		double money;
+		
+		
+		System.out.println("*****==WELCOME TO THE DEPRECIATION SYSTEM!!==*******");
+		System.out.println();
+		
+		
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		System.out.println("----------------------------------GROUP A-----------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.println("Enter the initial purchase price of laptop(RM): ");
+		purchase_price = scan.nextDouble();
+		
+		System.out.println("Enter the number of years: ");
+		year = scan.nextDouble();
+		
+		System.out.println("Enter depreciation percentage(%): ");
+		depreciation = scan.nextDouble();
+		value0 = purchase_price;
+		
+		for(int i=1; i<=year; i++) {
+			value0=((100-depreciation)*value0)/100;
+		}
+		total_price0 = purchase_price * groupA;
+		salvage_value0 = value0 * groupA;
+		
+		System.out.printf("\nBefore depreciation: RM%.2f\n", total_price0);
+		System.out.printf("After depreciation : RM%.2f\n",salvage_value0);
+		
+		
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("----------------------------------GROUP B-----------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.println("Enter the initial purchase price of laptop: ");
+		purchase_price = scan.nextDouble();
+		
+		System.out.println("Enter the number of years: ");
+		year = scan.nextDouble();
+		
+		System.out.println("Enter depreciation percentage: ");
+		depreciation = scan.nextDouble();
+		value1 = purchase_price;
+		
+		for(int i=1; i<=year; i++) {
+			value1=((100-depreciation)*value1)/100;
+		}
+		total_price1 = purchase_price * groupB;
+		salvage_value1 = value1 * groupB;
+		
+		System.out.printf("\nBefore depreciation: RM%.2f\n", total_price1);
+		System.out.printf("After depreciation : RM%.2f\n",salvage_value1);
+		
+		
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("----------------------------------GROUP C-----------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.println("Enter the initial purchase price of laptop: ");
+		purchase_price = scan.nextDouble();
+		
+		System.out.println("Enter the number of years: ");
+		year = scan.nextDouble();
+		
+		System.out.println("Enter depreciation percentage: ");
+		depreciation = scan.nextDouble();
+		value2 = purchase_price;
+		
+		for(int i=1; i<=year; i++) {
+			value2=((100-depreciation)*value2)/100;
+		}
+		total_price2 = purchase_price * groupC;
+		salvage_value2 = value2 * groupC;
+		
+		System.out.printf("\nBefore depreciation: RM%.2f\n", total_price2);
+		System.out.printf("After depreciation : RM%.2f\n",salvage_value2);
+		
+		
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("----------------------------------GROUP D-----------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.println("Enter the initial purchase price of laptop: ");
+		purchase_price = scan.nextDouble();
+		
+		System.out.println("Enter the number of years: ");
+		year = scan.nextDouble();
+		
+		System.out.println("Enter depreciation percentage: ");
+		depreciation = scan.nextDouble();
+		value3 = purchase_price;
+				
+		for(int i=1; i<=year; i++) {
+			value3=((100-depreciation)*value3)/100;
+		}
+		total_price3 = purchase_price * groupD;
+		salvage_value3 = value3 * groupD;
+		
+		System.out.printf("\nBefore depreciation: RM%.2f\n", total_price3);
+		System.out.printf("After depreciation : RM%.2f\n",salvage_value3);
+		
+		
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("----------------------------------GROUP E-----------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.println("Enter the initial purchase price of laptop: ");
+		purchase_price = scan.nextDouble();
+		
+		System.out.println("Enter the number of years: ");
+		year = scan.nextDouble();
+		
+		System.out.println("Enter depreciation percentage: ");
+		depreciation = scan.nextDouble();
+		value4 = purchase_price;
+		
+		for(int i=1; i<=year; i++) {
+			value4=((100-depreciation)*value4)/100;
+		}
+		total_price4 = purchase_price * groupE;
+		salvage_value4 = value4 * groupE;
+		
+		System.out.printf("\nBefore depreciation: RM%.2f\n", total_price4);
+		System.out.printf("After depreciation : RM%.2f\n",salvage_value4);
+		
+		
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("---------------------------TOTAL SALVAGE VALUE------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.printf("Group A: \tRM%.2f\n",salvage_value0);
+		System.out.printf("Group B: \tRM%.2f\n",salvage_value1);
+		System.out.printf("Group C: \tRM%.2f\n",salvage_value2);
+		System.out.printf("Group D: \tRM%.2f\n",salvage_value3);
+		System.out.printf("Group E: \tRM%.2f\n",salvage_value4);
+		
+		double t_salvage_value = salvage_value0 + salvage_value1 + salvage_value2 + salvage_value3 + salvage_value4;
+		System.out.println("          \t--------------");
+		System.out.printf("Total  : \tRM%.2f\n", t_salvage_value);
+		System.out.println("          \t--------------");
+		
+	
+		//scanner input new laptop
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("--------------------------NEW LAPTOP INFORMATION----------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.println("\nTHE NUMBER OF NEW LAPTOP SOLD: ");
+		newlaptop = scan.nextInt();
+		
+		System.out.println("THE PRICE OF A NEW LAPTOP: ");
+		pricelaptop = scan.nextDouble();
+		
+		totalprice = newlaptop * pricelaptop;
+		System.out.printf("\nTOTAL PRICE OF ALL LAPTOP SOLD: RM%.2f", totalprice);
+		
+		
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("---------------------------------INSTALMENT---------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————\n");
+		
+		System.out.println("----------------------------RULES FOR INSTALMENT----------------------------");
+		System.out.println("1. MAXIMUM LIMIT OF INSTALMENT PERIOD IS 10 YEARS");
+		System.out.println("2. CUSTOMER MAY PAY 5% INTEREST EACH YEAR");
+		System.out.println("3. CUSTOMER MUST PAY 20% DEPOSIT FOR INSTALMENT");
+		System.out.println("4. SECTION 1 WILL SHOW THE BASIC INFORMATION OF INSTALMENT");
+		System.out.println("5. SECTION 2 WILL SHOW MONEY RECEIVED EACH YEAR AND INTEREST");
+		System.out.println("6. 1% PENALTY WILL BE CHARGED IF EXCEED THE INSTALMENT PERIOD");
+		
+		System.out.println("\n---------------------------------SECTION 1----------------------------------");
+		
+		deposit = 0.2 * totalprice;
+		System.out.printf("\nDEPOSIT RECEIVED  : \tRM%.2f\n",deposit);
+		
+		receivable = totalprice - deposit - t_salvage_value;
+		System.out.printf("ACCOUNT RECEIVABLE: \tRM%.2f\n" , receivable);
+		
+		System.out.println("INSTALMENT PERIOD: ");
+		instalperiod = scan.nextInt();
+		
+		System.out.println("\n---------------------------------SECTION 2----------------------------------");
+		instalment = receivable / instalperiod;
+		double balance = receivable;
+
+		for(int i = 1; i <= instalperiod; i++) {
+			balance = balance - instalment;
+		    
+			System.out.println("Installment " + i + "  " + String.format(": \tRM%.2f",instalment) + "\tBalance " + String.format(": \tRM%.2f ", balance));
+		}
+		
+		double interest = 0.05 * instalment;
+		System.out.printf("Interest per year: \tRM%.2f\n",interest);
+		
+		
+		System.out.println("\n————————————————————————————————————————————————————————————————————————————");
+		System.out.println("-----------------------------------CASHBACK---------------------------------");
+		System.out.println("————————————————————————————————————————————————————————————————————————————");
+		
+		System.out.println("\n----------------------------RULES FOR CASHBACK------------------------------");
+		System.out.println("1. CUSTOMERS PAY BACK IN 2 YEARS TIME WILL GET 20% CASHBACK");
+		System.out.println("2. CUSTOMERS PAY BACK IN 3 YEARS TIME WILL GET 15% CASHBACK");
+		System.out.println("3. CUSTOMERS PAY BACK IN 4 YEARS TIME WILL GET 10% CASHBACK");
+		System.out.println("4. CUSTOMERS PAY BACK IN 5 YEARS TIME WILL GET 0% CASHBACK");
+		
+		System.out.println("\n---------------------------------CALCULATION----------------------------------");
+		
+		System.out.println("ENTER YEARS TAKEN TO PAYBACK: ");
+		duration = scan.nextInt();
+		
+		if(duration == 5) {
+			cashback = 0;
+			System.out.println("\nHE FOLLOWED THE MINIMUM REQUIREMENT RULES OF CASHBACK AND PAY BACK IN TIME");
+			System.out.println("NO CASHBACK IS GIVEN");
+			System.out.println("\nCASHBACK: \t" + cashback + "%");
+			
+		
+		}	
+		
+		else if(duration == 4) {
+			cashback = 10;
+			money = 0.1 * receivable;
+			System.out.println("\nHE FOLLOWED THE 3RD RULE OF CASHBACK AND PAY BACK IN TIME");
+			System.out.println("CASHBACK IS GIVEN");
+			System.out.println("\nCASHBACK: \t" + cashback + "%");
+			System.out.printf("CASH OUT : \tRM%.2f\n",money);
+		}
+		
+		else if(duration == 3) {
+			cashback = 15;
+			money = 0.15 * receivable;
+			System.out.println("\nHE FOLLOWED THE 2ND RULE OF CASHBACK AND PAY BACK IN TIME");
+			System.out.println("CASHBACK IS GIVEN");
+			System.out.println("\nCASHBACK: \t" + cashback + "%");
+			System.out.printf("CASH OUT : \tRM%.2f\n",money);
+		}
+		
+		else if(duration == 2) {
+			cashback = 20;
+			money = 0.2 * receivable;
+			System.out.println("\nHE FOLLOWED THE 1ST RULE OF CASHBACK AND PAY BACK IN TIME");
+			System.out.println("CASHBACK IS GIVEN");
+			System.out.println("\nCASHBACK: \t" + cashback + "%");
+			System.out.printf("CASH OUT : \tRM%.2f\n",money);
+		}
+		
+		else {
+			penalty = 0.01 * receivable;
+			System.out.println("\nHE VIOLATED THE 6TH RULE OF INSTALMENT");
+			System.out.println("1% EXTRA CASH WILL BE CHARGED");
+			System.out.printf("\nPENALTY: \tRM%.2f\n");
+		}
+
+		System.out.println("\n*******==THANK YOU FOR USING THIS SYSTEM!!==********");
+		scan.close(); 
+	}
+}
+
+4. Satellite :
+
+package assignment2;
+
+import java.util.Scanner;
+
+public class Assignment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanMe=new Scanner (System.in);
+		
+	
+		System.out.println("*********************************************");
+		System.out.println("Personal Information Security System ");
+	    System.out.println("Please fill in this form.");
+	    System.out.println("*********************************************");
+	  
+		System.out.println("*********************************************");
+		System.out.println("Name :" );
+		String name = scanMe.nextLine();
+		
+	    System.out.println("Age :");
+	    String age = scanMe.nextLine();
+	    
+	    System.out.println("Phone number :");
+	    String phonenumber = scanMe.nextLine();
+	    
+	    System.out.println("Email address :");
+	    String email1 = scanMe.nextLine();
+	    
+	    System.out.println("Password :");
+	    String password = scanMe.nextLine();
+	    
+	    System.out.println("*********************************************");
+		System.out.println("Personal Information Complete");
+	    System.out.println("*********************************************");
+	   
+	    
+	    
+	    
+		System.out.println("*********************************************");
+		System.out.println("Register");
+	    System.out.println("Please fill in this form to create an account");
+	    System.out.println("*********************************************");
+	  
+	    System.out.println("*********************************************");
+		System.out.println("Email");
+	    System.out.println("Enter Email");
+	    String email = scanMe.nextLine();
+	    System.out.println("*********************************************");
+	  
+	    
+	    for(int i=2;i>=0;i--) {
+	    	
+        System.out.print("Enter your account password: ");
+        int a = scanMe.nextInt();
+        int pass = 563426;
+        if(a==pass) {
+            	
+        System.out.println("Your password is correct.");
+          break;
+           }else
+            	
+        System.out.print("Your password is wrong! You have "+i+" chance.");
+        System.out.println();
+          if(i==0) {
+            	
+        System.out.print("Sorry, you need to wait 5 minutes to key in your password again!");
+
+	    
+	    System.out.println("By creating an account you agree to our ");
+	    System.out.println("Register");
+	    System.out.println("Already have an account? Sign in");
+	    System.out.println("*********************************************");
+	    
+	    
+	     
+	    System.out.println("*********************************************");
+	    System.out.println("Validation");
+		System.out.println("Please submit this form");
+		System.out.println("*********************************************");
+		
+		System.out.println("Username");
+		System.out.println("Enter Username:"); 
+	    String username = scanMe.nextLine();
+	  
+		System.out.println("Password");
+		System.out.println("Enter password :"); 
+	    double password3 = scanMe.nextDouble();
+	
+	    System.out.println("Keyword");
+		System.out.println("Enter Keyword :"); 
+	    double keyword1 = scanMe.nextDouble();  
+	    
+	    
+		System.out.println("Submit");
+		System.out.println("*********************************************");
+		
+		
+		
+		System.out.println("*********************************************");  
+	    System.out.println("Keyword and Identify");
+	    System.out.println("*********************************************");
+	   
+	  
+	    for(int i1=2;i1>=0;i1--) {
+	    	
+	    System.out.print("Enter your Keywords : ");  	
+		int keywords = scanMe.nextInt(); 
+		System.out.println("*****");
+		int password1 = 894945; 
+	    if(keywords==password1) {   
+	    	
+	    System.out.println("Correct keywords :");
+	    int correctkeywords = scanMe.nextInt();  
+	    System.out.println("*****");
+		 
+	     }else
+	    	
+		System.out.println("Invalid Keywords."); 
+	    System.out.println("Your keywords is wrong! You have only "+i1+" chance. Please enter again: ");
+	    String invalidkeywords= scanMe.next();
+	    if(i1==0) {
+		System.out.println("*****");
+		
+	      }else
+	
+		System.out.println("Repeat Keywords ");
+		System.out.println("Enter keywords :");
+		String wrongkeywords = scanMe.next(); 
+		System.out.println("*****");
+		
+		System.out.println("Your keywords is correct."); 	
+		System.out.println("Identify."); 
+		break;}
+	    
+	    
+	    
+	    
+	    
+	    System.out.println("Warning Text ");
+	    System.out.println("*********************************************");
+	  
+		System.out.println("Phone number :" );
+		String name1 = scanMe.nextLine();
+		
+	    System.out.println("Email address :");
+	    String email2 = scanMe.nextLine();
+	    
+	    System.out.println("Warning Text : ");
+	    System.out.println("Warning! Third-party wants to intrude on your data. Please be alert. Please click 'Yes' to block the action and protect your data. Stop it now!" );
+	    String warningtext = scanMe.nextLine();
+	    
+	    
+        if(warningtext.equals ("Yes")) 
+        {
+        	System.out.println("Block and report.");
+        }
+        else 
+        {
+    		 System.out.println("Everything will be at your own risk." );
+        }
+	  
+	    }
+          }
+	    }
+        
+
+        
+         boolean warningtext(String string) {
+		// TODO Auto-generated method stub
+		return false;
+         }
+         {
+		
+
+		System.out.println("**********");
+		System.out.println("Threat.");
+		System.out.println("**********");
+		    
+		int x;
+		int p1 = 0 ; //P(A) declare as p
+	    int p2 = 0; 
+	    int p3 = 0; 
+		int p4 = 0; 
+		int p5 = 0; 
+	    int p6 = 0; 
+		int a1 = 90;//n(A) declare as a
+		int a2 = 85; 
+		int a3 = 60;     
+		int a4 = 50; 
+		int a5 = 86; 
+		int a6 = 90;
+		int s = 6;//n(S) declare as s
+		int total1; int total2;
+			
+		//Formula P(A) = n(A)/n(S)
+			
+		System.out.println ("Enter the number of x:");
+	          Scanner scanMe = null;
+			x = scanMe.nextInt();
+	           
+	    switch(x) {
+	    case 1:
+	    System.out.println("Hijack your usernames and passwords :");
+	    p1 = a1 / s; //Hijack your usernames and passwords
+	    System.out.println("P1 = " + p1);
+			break;
+				
+	   case 2:
+	   System.out.println("Steal your money and open credit card and bank accounts in your name :");
+	   p2 = a2 / s; //Steal your money
+	   System.out.println("P2= " + p2 ); 
+		    break;
+	            
+	            
+	   case 3:
+	   System.out.println("Ruin your credit :");
+	   p3 = a3 / s; //Ruin your credit
+	   System.out.println("P3 = " + p3);
+	        break;
+	         
+	   case 4:
+	   System.out.println("Request new account Personal Identification Numbers (PINs) or additional credit cards :");
+	   p4 = a4 / s; //Request new account Personal Identification Numbers (PINs) or additional credit cards
+	   System.out.println("P4 = " + p4);
+	   break;
+			
+	   case 5:
+	   System.out.println("Use and abuse your Social Security number :");
+	   p5 = a5 / s; //Use and abuse
+	   System.out.println("P5 = " + p5);  
+	   break;
+			
+	   case 6:
+	   System.out.println("Sell your information to other parties who will use it for illicit or illegal purposes :");
+	   p6 = a6 / s; //Sell information
+	   System.out.println("P6 = " + p6);
+	   break; 
+	     
+			}
+				{
+			
+			//Total amount
+			        total1 = a1 + a2 + a3 + a4 + a5 + a6;
+			        System.out.println("Total amount threat = " + total1);
+			
+			//Total probability
+					total2 = p1 + p2 + p3 + p4 + p5 + p6;
+					System.out.println("Total amount probability = " + total2);
+						 
+
+                   scanMe.close();
+}
+	   System.out.println("*********************************************");
+				
+				
+	   System.out.println("****************");
+	   System.out.println("Vulnerability");
+	   System.out.println("****************");
+			    
+			    
+	  //P(A) declare as p	 
+	  int p7; 
+	  int p8; 
+	  int p9; 
+	  int p10; 
+			  
+	  //n(A) declare as a
+	  int a7 = 60; 
+	  int a8 = 77;  
+	  int a9 = 70; 
+	  int a10 = 89; 
+      int s1 = 4;//n(S) declare as s
+	  int total3; int total4;
+						
+	  //Formula P(A) = n(A)/n(S)
+						
+	  System.out.println("Broken authentication : ");
+	  p7 = a7 / s1; //Broken authentication
+	  System.out.println("P1 = " + p1);
+						
+	  System.out.println("Cross-Site Scripting :");
+	  p8 = a8 / s1; //Cross-Site Scripting
+	  System.out.println("P2 = " + p2);
+					
+	  System.out.println("Cross-Site Request Forgery :");
+	  p9 = a9 / s1; //Cross-Site Request Forgery
+	  System.out.println("P3 = " + p3);
+						
+	  System.out.println("Security Misconfiguration :");
+	  p10 = a10 / s1; //Security Misconfiguration
+	  System.out.println("P4 = " + p4);
+						
+					 
+	 //Total amount
+	 total3 = a7 + a8 + a9 + a10;
+	 System.out.println("Total amount = " + total3);
+						
+	 //Total probability
+	 total4 = p7 + p8 + p9 + p10;
+	 System.out.println("Total amount = " + total4);
+						
+			
+			
+	 System.out.println("****************");
+	 System.out.println("Risk");
+	 System.out.println("****************");
+	    
+	    int probability_occurrence;
+	    int risk;
+	    
+	//probability of occurrence = probability threat + probability vulnerability
+	    probability_occurrence = total2 + total4;
+	    
+	//risk = (threat x vulnerability x probability of occurrence)
+	    risk = (s * s1 * probability_occurrence);
+	   
+	 System.out.println("Risk = " + s + "x" + s1 + "x" +  probability_occurrence);
+	 System.out.println("Risk = " + risk);
+		
+		
+	    
+          }
+	    }
+
+5. TV :
+
+package assignment;
+import java.util.Scanner;
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+        //variable
+        String name;
+        char choice='Y';
+        int preference,age,phonenum;
+        double packageprice,actualprice, discount1, discount2, deposit,price, totalprice,balance;
+        double installationbill = 99.00;
+        
+        //Greeting the customers
+        System.out.println("Hello my dear customer! Welcome to Astro customer service.");
+        System.out.println("I'm here to help our new customer to choose the packages provided by Astro.");
+        System.out.println("I will provide the information related to the packages based on your preference.");
+        System.out.println();
+        System.out.println("Enter 1 for Primary Pack");
+        System.out.println("Enter 2 for Entertainment Pack");
+        System.out.println("Enter 3 for Broadband Pack");
+        System.out.println("Enter 4 for Platinum Pack");
+        System.out.println();
+
+        System.out.println("Follow the instructions to know more about the package.");
+        System.out.println("Have you decide your number?\nENTER 'Y' FOR YES\nENTER 'N' FOR NO\nPLEASE USE CAPITAL LETTER ");
+        choice=sc.next().charAt(0);
+        System.out.println();
+        
+        while(choice=='Y') {
+        	
+          System.out.println("Enter your number here:- ");
+          preference=sc.nextInt();
+          System.out.println();
+          
+          if(preference==1) {  
+            System.out.println("\t ASTRO PRIMARY PACK");
+            System.out.println("*Price = RM 60.00\n*Installation fee = RM 99.00\n*24 months subscription contract\n*Up to 90+ Channels");
+            System.out.println("*Astro Go accessible\n*Support HD Channel\n*Free Ultrabox Decoder Set");
+            System.out.println();
+           
+            //Calculation for the payment customers need to pay 
+            packageprice=60;
+            actualprice = packageprice*24 + installationbill;
+            discount1 = 0.10*packageprice;// discount for first month purchased
+            deposit = packageprice- discount1 + installationbill;// for first month
+            balance = packageprice*23;
+           
+            price = (balance) + deposit;// total payment for 2 years subscription contract
+            discount2 = 0.15*price;//discount for customers who skip deposit and paid fully payment for 2 years subscription contract only
+            totalprice = price- discount2;
+           
+            System.out.println();//info
+            System.out.println("My dearest customers, we have provided some discount for you in conjuction with your first time purchased with Astro such as: ");
+            System.out.println("-10% FIRST MONTH PURCHASE DISCOUNT for every package \n-15% WOW DISCOUNT(for customers who skip deposit and paid fully payment)");
+            System.out.println("Here is your payment detail based on your package selected:");
+            System.out.println("For your information, we offer two payment methods along with certain discount");
+            System.out.println();
+            
+            //Customer's payment detail
+            System.out.println("METHOD 1: DEPOSIT AND MONTHLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT");
+            System.out.println();
+            System.out.println(" PACKAGE PRICE               = RM "+ packageprice);
+            System.out.println(" INSTALLATION BILL           = RM 99.00 " );
+            System.out.println(" ACTUAL  PRICE               = RM "+ actualprice);
+            System.out.println(" 10% FIRST MONTH DISCOUNT    = RM "+ discount1);
+            System.out.println(" TOTAL PRICE AFTER DISCOUNT  = RM "+ price);
+            System.out.println(" DEPOSIT                     = RM "+ deposit);
+            System.out.println(" BALANCE                     = RM "+ balance);
+            System.out.println(" MONTHLY PAYMENT             = RM "+ packageprice);
+           
+            System.out.println();
+            System.out.println("METHOD 2: FULLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT ");
+            System.out.println();
+            System.out.println(" ACTUAL PRICE                                                                  = RM "+ actualprice);
+            System.out.println(" 10% FIRST MONTH DISCOUNT                                                      = RM "+ discount1);
+            System.out.println(" 15% WOW DISCOUNT                                                              = RM "+ discount2);
+            System.out.println(" TOTAL PRICE AFTER DISCOUNT                                                    = RM "+ totalprice);
+            System.out.println();
+        
+        }
+
+         else if(preference==2) {
+             System.out.println("\t ASTRO ENTERTAINMENT PACK");
+             System.out.println("*Price = RM 90.00\n*Installation fee = RM 99.00\n*24 months subscription contract\n*Up to 105+ Channels");
+             System.out.println("*Astro Go accessible\n*Support HD Channel\n*Free Ultrabox Decoder Set");
+             System.out.println();
+             
+             //Calculation for the payment customers need to pay 
+             packageprice=90;
+             actualprice = packageprice*24 + installationbill;
+             discount1 = 0.10*packageprice;// discount for first month purchased
+             deposit = packageprice- discount1 + installationbill;// for first month
+             balance = packageprice*23;
+             
+             price = (balance) + deposit;// total payment for 2 years subscription contract
+             discount2 = 0.15*price;//discount for customers who skip deposit and paid fully payment for 2 years subscription contract only
+             totalprice = price- discount2;
+             
+             System.out.println();//info
+             System.out.println("My dearest customers, we have provided some discount for you in conjuction with your first time purchased with Astro such as ");
+             System.out.println("10% FIRST MONTH PURCHASE DISCOUNT for every package \n15% WOW DISCOUNT(for customers who skip deposit and paid fully payment)");
+             System.out.println("Here is your payment detail based on your package selected:");
+             System.out.println("For your information, we offer two payment methods along with certain discount");
+             System.out.println();
+             
+             //Customer's payment detail
+             System.out.println("METHOD 1: DEPOSIT AND MONTHLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT");
+             System.out.println();
+             System.out.println(" PACKAGE PRICE               = RM "+ packageprice);
+             System.out.println(" INSTALLATION BILL           = RM 99.00 " );
+             System.out.println(" ACTUAL  PRICE               = RM "+ actualprice);
+             System.out.println(" 10% FIRST MONTH DISCOUNT    = RM "+ discount1);
+             System.out.println(" TOTAL PRICE AFTER DISCOUNT  = RM "+ price);
+             System.out.println(" DEPOSIT                     = RM "+ deposit);
+             System.out.println(" BALANCE                     = RM "+ balance);
+             System.out.println(" MONTHLY PAYMENT             = RM "+ packageprice);
+             System.out.println();
+             
+             System.out.println("METHOD 2: FULLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT ");
+             System.out.println();
+             System.out.println(" ACTUAL PRICE                                                                  = RM "+ actualprice);
+             System.out.println(" 10% FIRST MONTH DISCOUNT                                                      = RM "+ discount1);
+             System.out.println(" 15% WOW DISCOUNT                                                              = RM "+ discount2);
+             System.out.println(" TOTAL PRICE AFTER DISCOUNT                                                    = RM "+ totalprice);
+             System.out.println();
+         
+        }
+
+         else if(preference==3) {
+        	 System.out.println("\t ASTRO BROADBAND PACK");
+             System.out.println("*Price = RM 140.00\n*Installation fee = RM 99.00\n*24 months subscription contract\n*Up to 90+ Channels TV and Radio");
+             System.out.println("*Unlimited High Speed Internet\n*Astro Go accessible\n*Support HD Channel\n*Free Ultrabox Decoder Set, Modem and Router");
+             System.out.println();
+             
+             //Calculation for the payment customers need to pay 
+             packageprice=140;
+             actualprice = packageprice*24 + installationbill;
+             discount1 = 0.10*packageprice;// discount for first month purchased
+             deposit = packageprice- discount1 + installationbill;// for first month
+             balance = packageprice*23;
+             
+             price = (balance) + deposit;// total payment for 2 years subscription contract
+             discount2 = 0.15*price;//discount for customers who skip deposit and paid fully payment for 2 years subscription contract only
+             totalprice = price- discount2;
+             
+             System.out.println();//info
+             System.out.println("My dearest customers, we have provided some discount for you in conjuction with your first time purchased with Astro such as ");
+             System.out.println("10% FIRST MONTH PURCHASE DISCOUNT for every package \n15% WOW DISCOUNT(for customers who skip deposit and paid fully payment)");
+             System.out.println("Here is your payment detail based on your package selected:");
+             System.out.println("For your information, we offer two payment methods along with certain discount");
+             System.out.println();
+             
+             //Customer's payment detail
+             System.out.println("METHOD 1: DEPOSIT AND MONTHLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT");
+             System.out.println();
+             System.out.println(" PACKAGE PRICE               = RM "+ packageprice);
+             System.out.println(" INSTALLATION BILL           = RM 99.00 " );
+             System.out.println(" ACTUAL  PRICE               = RM "+ actualprice);
+             System.out.println(" 10% FIRST MONTH DISCOUNT    = RM "+ discount1);
+             System.out.println(" TOTAL PRICE AFTER DISCOUNT  = RM "+ price);
+             System.out.println(" DEPOSIT                     = RM "+ deposit);
+             System.out.println(" BALANCE                     = RM "+ balance);
+             System.out.println(" MONTHLY PAYMENT             = RM "+ packageprice);
+             System.out.println();
+             
+             System.out.println("METHOD 2: FULLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT ");
+             System.out.println();
+             System.out.println(" ACTUAL PRICE                                                                  = RM "+ actualprice);
+             System.out.println(" 10% FIRST MONTH DISCOUNT                                                      = RM "+ discount1);
+             System.out.println(" 15% WOW DISCOUNT                                                              = RM "+ discount2);
+             System.out.println(" TOTAL PRICE AFTER DISCOUNT                                                    = RM "+ totalprice);
+             System.out.println();
+        	
+        }
+
+         else if(preference==4) {
+        	 System.out.println("\t ASTRO PLATINUM PACK");
+             System.out.println("*Price = RM 195.00\n*Installation fee = RM 99.00\n*24 months subscription contract\n*Up to 145+ Channels");
+             System.out.println("*Astro Go accessible\n*Support UHD/4K Channel\n*Free Ultrabox Decoder Set");
+             System.out.println();
+             
+             //Calculation for the payment customers need to pay 
+             packageprice=195;
+             actualprice = packageprice*24 + installationbill;
+             discount1 = 0.10*packageprice;// discount for first month purchased
+             deposit = packageprice- discount1 + installationbill;// for first month
+             balance = packageprice*23;
+             
+             price = (balance) + deposit;// total payment for 2 years subscription contract
+             discount2 = 0.15*price;//discount for customers who skip deposit and paid fully payment for 2 years subscription contract only
+             totalprice = price- discount2;
+             
+             System.out.println();//info
+             System.out.println("My dearest customers, we have provided some discount for you in conjuction with your first time purchased with Astro such as ");
+             System.out.println("10% FIRST MONTH PURCHASE DISCOUNT for every package \n15% WOW DISCOUNT(for customers who skip deposit and paid fully payment)");
+             System.out.println("Here is your payment detail based on your package selected:");
+             System.out.println("For your information, we offer two payment methods along with certain discount");
+             System.out.println();
+             
+             //Customer's payment detail
+             System.out.println("METHOD 1: DEPOSIT AND MONTHLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT");
+             System.out.println();
+             System.out.println(" PACKAGE PRICE               = RM "+ packageprice);
+             System.out.println(" INSTALLATION BILL           = RM 99.00 " );
+             System.out.println(" ACTUAL  PRICE               = RM "+ actualprice);
+             System.out.println(" 10% FIRST MONTH DISCOUNT    = RM "+ discount1);
+             System.out.println(" TOTAL PRICE AFTER DISCOUNT  = RM "+ price);
+             System.out.println(" DEPOSIT                     = RM "+ deposit);
+             System.out.println(" BALANCE                     = RM "+ balance);
+             System.out.println(" MONTHLY PAYMENT             = RM "+ packageprice);
+             System.out.println();
+             
+             System.out.println("METHOD 2: FULLY PAYMENT FOR 2 YEARS SUBSCRIPTION CONTRACT ");
+             System.out.println();
+             System.out.println(" ACTUAL PRICE                                                                  = RM "+ actualprice);
+             System.out.println(" 10% FIRST MONTH DISCOUNT                                                      = RM "+ discount1);
+             System.out.println(" 15% WOW DISCOUNT                                                              = RM "+ discount2);
+             System.out.println(" TOTAL PRICE AFTER DISCOUNT                                                    = RM "+ totalprice);
+             System.out.println();
+        
+        }
+        
+         else {
+ 
+             System.out.println("You entered the wrong number!");
+         }   
+          
+          System.out.println("Do you want to look for another package?\nENTER 'Y' if you want to continue searching.");
+          System.out.println("ENTER 'N' if you want to stop and go to the next step");
+          choice=sc.next().charAt(0);
+        }
+      
+        
+       //Getting the customers personal information
+       System.out.println("Please fill in your personal information here:");
+       System.out.println();
+       System.out.println("NAME:");
+       name= sc.next();
+       
+       System.out.println("AGE:");
+       age= sc.nextInt();
+       
+       System.out.println("PHONE NUMBER (+60):");
+       phonenum= sc.nextInt();
+       System.out.println();
+       
+       //Display customer personal information
+       System.out.println("Name = "+ name+ "\nAge ="+ age + "\nPhone number = "+phonenum);
+       System.out.println();
+       System.out.println("THANK YOU FOR CHOOSING OUR SERVICE.WE HOPE THIS CAN HELP YOU MAKE YOUR OWN DECISION.");
+       System.out.println("PLEASE CALL OUR ASTRO CENTRE TO MAKE FURTHER CONFIRMATION.");
+
+       sc.close();
+
+	}
+
+}
